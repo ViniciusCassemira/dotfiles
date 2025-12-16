@@ -1,0 +1,10 @@
+[core]
+	editor = nano
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    pl = pull
+    ps = push
