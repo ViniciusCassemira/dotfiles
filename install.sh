@@ -4,5 +4,5 @@ set -e
 chmod +x install-ohmyzsh.sh
 chmod +x active-zshrc.sh
 
-./install-zsh-plugins.sh
+./install-ohmyzsh.sh
 ./active-zshrc.sh
