@@ -2,7 +2,8 @@
 set -e
 
 # Paths
-SOURCE="$(pwd)/.zshrc"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SOURCE="$SCRIPT_DIR/../configs/.zshrc"
 TARGET="$HOME/.zshrc"
 
 # Backup existing .zshrc
