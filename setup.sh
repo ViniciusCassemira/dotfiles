@@ -1,5 +1,3 @@
-scrips iniciais, como: instalar Oh My Zsh e configurar o Git.
-
 chmod -R +x ./scripts
 
 sudo apt update && sudo apt install -y zsh
