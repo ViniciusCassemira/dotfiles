@@ -14,6 +14,3 @@ fi
 # Create symlink
 ln -s "$SOURCE" "$TARGET"
 echo ".zshrc linked successfully"
-
-# Reload Zsh configuration
-source ~/.zshrc

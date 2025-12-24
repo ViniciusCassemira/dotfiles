@@ -26,8 +26,6 @@ done
 
 # Variables
 ZSH_DIR="$HOME/.oh-my-zsh"
-ZSH_CUSTOM="${ZSH_CUSTOM:-$ZSH_DIR/custom}"
-PLUGINS_DIR="$ZSH_CUSTOM/plugins"
 
 echo "⚙️ Installing Oh My Zsh and plugins..."
 
@@ -37,22 +35,12 @@ else
   echo "🗣️ Oh My Zsh is already installed."
 fi
 
-mkdir -p "$PLUGINS_DIR"
+# Install plugins
+ZSH_CUSTOM="$ZSH_DIR/custom/plugins"
+if [ ! -d "$ZSH_CUSTOM/zsh-autosuggestions" ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/zsh-autosuggestions"
+fi
 
-install_plugin () {
-  local name=$1
-  local repo=$2
-
-  if [ ! -d "$PLUGINS_DIR/$name" ]; then
-    echo "⚙️ Installing plugin: $name"
-    git clone "$repo" "$PLUGINS_DIR/$name"
-  else
-    echo "🗣️ Plugin $name is already installed"
-  fi
-}
-
-install_plugin "zsh-autosuggestions" \
-  "https://github.com/zsh-users/zsh-autosuggestions"
-
-install_plugin "zsh-syntax-highlighting" \
-  "https://github.com/zsh-users/zsh-syntax-highlighting"
+if [ ! -d "$ZSH_CUSTOM/zsh-syntax-highlighting" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/zsh-syntax-highlighting"
+fi

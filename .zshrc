@@ -5,11 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="aussiegeek"
 
 # Plugins
-plugins=(
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # Source Oh My Zsh
 if [ -d "$ZSH" ]; then
