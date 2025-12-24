@@ -1,4 +1,4 @@
-chmod -R +x ./scripts
+chmod -R +x ./
 
 sudo apt update && sudo apt install -y zsh
 
