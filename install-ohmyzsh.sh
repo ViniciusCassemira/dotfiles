@@ -34,13 +34,3 @@ if [ ! -d "$ZSH_DIR" ]; then
 else
   echo "🗣️ Oh My Zsh is already installed."
 fi
-
-# Install plugins
-ZSH_CUSTOM="$ZSH_DIR/custom/plugins"
-if [ ! -d "$ZSH_CUSTOM/zsh-autosuggestions" ]; then
-  git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/zsh-autosuggestions"
-fi
-
-if [ ! -d "$ZSH_CUSTOM/zsh-syntax-highlighting" ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/zsh-syntax-highlighting"
-fi
