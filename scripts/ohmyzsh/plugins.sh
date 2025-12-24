@@ -2,7 +2,7 @@
 set -e
 ZSH_DIR="$HOME/.oh-my-zsh"
 
-if [ -d "$ZSH_DIR" ]; then
+if [ ! -d "$ZSH_DIR" ]; then
   echo "⚠️ Oh My Zsh is not installed. Please install it first."
   exit 1
 fi
